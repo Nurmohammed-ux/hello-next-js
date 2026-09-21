@@ -19,23 +19,23 @@ const TutorialsPage = async ({ params }) => {
   console.log("Tutorial Slug Parameters:", slugArray);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 space-y-8 text-slate-300">
+    <div className="px-4 py-8 space-y-8 text-slate-300">
       
       {/* Breadcrumb Navigation */}
       <div className="flex items-center gap-2 text-xs text-slate-400 font-mono">
         <Link href="/" className="hover:text-indigo-400 transition">Home</Link>
         <span>/</span>
-        <Link href="/tutorials" className="hover:text-indigo-400 transition">Tutorials</Link>
+        <Link href="/tutorials" className="hover:text-indigo-700 transition">Tutorials</Link>
         {slugArray.length > 0 && (
           <>
             <span>/</span>
-            <span className="text-indigo-400 uppercase">{technology}</span>
+            <span className="text-indigo-700 uppercase">{technology}</span>
           </>
         )}
         {subject && (
           <>
             <span>/</span>
-            <span className="text-slate-200">{subject}</span>
+            <span className="text-slate-400">{subject}</span>
           </>
         )}
       </div>
@@ -44,7 +44,7 @@ const TutorialsPage = async ({ params }) => {
       <div className="bg-linear-to-r from-indigo-950/60 via-black to-slate-950 border border-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
         
-        <div className="relative z-10 space-y-4 max-w-3xl">
+        <div className="relative z-10 space-y-4">
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-xs font-mono uppercase tracking-widest text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">
               Tech: {technology}
